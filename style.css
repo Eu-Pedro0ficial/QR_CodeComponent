@@ -14,28 +14,29 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
-    width: 25%;
-    height: 70%;
+    width: 380px;
+    height: 600px;
 
     position: absolute;
     right: 50%;
     bottom: 50%;
     transform: translate(50%, 50%);
 
-    padding: 25px;
+    padding: 10px;
     border-radius: 30px;
     background-color: hsl(0, 0%, 100%);
 }
 
 section#image{
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 section#image img{
-    width: 95%;
+    width: 100%;
     border-radius: 25px;
 }
 
@@ -59,4 +60,39 @@ section#content p{
     font-weight: 400;
     text-align: center;
     color: hsl(220, 15%, 55%);
+}
+
+footer div.attribution{
+    position: fixed;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%);
+
+    font-size: 11px; 
+    text-align: center;
+}
+footer div.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 400px){
+    main{
+        gap: 0;
+        padding: 5px;
+        width: 370px;
+        height: 580px;
+    }
+}
+
+@media (max-height: 650px){
+    main{
+        flex-direction: row;
+        width: 700px;
+        height: 350px;
+        padding: 15px;
+        gap: 0;
+    }
+    section#image img{
+        margin-left: 15px;
+    }
 }
